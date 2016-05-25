@@ -20,5 +20,4 @@ python是一种强大的面向对象的编程语言，但这并不意味着它�
 
 ##以下是我的学习记录
 1. [samples](https://github.com/Jon-ang/learnpython/tree/master/samples)中是参考教材写的例程，主要包括python的基础知识；
-
-2.[practice](https://github.com/Jon-Wang/learnpython/tree/master/practice)中是在基础知识学习的基础上，进行的一些操作实战，在实战中加深python基础内容的理解，并学习新的知识。
+2. [practice](https://github.com/Jon-Wang/learnpython/tree/master/practice)中是在基础知识学习的基础上，进行的一些操作实战，在实战中加深python基础内容的理解，并学习新的知识。
