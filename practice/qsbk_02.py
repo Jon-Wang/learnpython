@@ -28,8 +28,10 @@ class qsbk:
             for item in items:
                 haveImg = re.search("img",item[2])
                 if not haveImg:
-                    print item[0],item[3],item[1]
-                
+                    replacebr = re.compile('<br/>')
+                    text = re.sub(replacebr,"\n",item[1])
+                    print item[0],item[3],text
+
         except urllib2.URLError, e:
             if hasattr(e,"code"):
                 print e.code
