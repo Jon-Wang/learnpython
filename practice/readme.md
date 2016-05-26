@@ -7,3 +7,4 @@ python版本：2.7.11
 
 1. [qsbk_01.py](https://github.com/Jon-Wang/learnpython/blob/master/practice/qsbk_01.py)爬取糗事百科的8小时最新页的段子。
 2. [qsbk_02.py](https://github.com/Jon-Wang/learnpython/blob/master/practice/qsbk_02.py)是在[qsbk_01.py](https://github.com/Jon-Wang/learnpython/blob/master/practice/qsbk_01.py)的基础上，引入类和方法，进行优化和封装，爬取糗事百科的24小时热门页的段子。
+3. [qsbk_10.py](https://github.com/Jon-Wang/learnpython/blob/master/practice/qsbk_10.py)进一步优化，每按一次回车更新一条内容，当前页的内容抓取完毕后，自动抓取下一页，按‘q’退出
