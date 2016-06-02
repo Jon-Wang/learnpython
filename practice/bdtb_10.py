@@ -51,7 +51,6 @@ class Bdtb:
         pattern = re.compile('<title>(.*?)</title>',re.S)
         result = re.search(pattern,page)
         if result:
-            #return "Title: %s" % (result.group(1).strip())
             return result.group(1).strip()
         else:
             return None
@@ -64,17 +63,22 @@ class Bdtb:
         else:
             return None
         
-    def getContent(self,page,title,num):
+    def getContent(self,page,title,pagenum):
         pattern = re.compile('<div id="post_content_.*?>(.*?)</div>',re.S)
         items = re.findall(pattern,page)
         floor = 1
-        file = open(title+'.txt','w+')
-        file.write("Title:" + title.encode('utf-8')+"\n")
-        file.write("PageNum:" + num.encode('utf-8')+"\n")       
-        for item in items:
-            file.write("\n" + str(floor) + " floor-------------------------------\n\n")
-            file.write(self.tool.replace(item).encode('utf-8'))
-            floor += 1
+        try:
+            file = open(title+'.txt','w+')
+            file.write("Title:" + title.encode('utf-8')+"\n")
+            file.write("PageNum:" + pagenum.encode('utf-8')+"\n")       
+            for item in items:
+                file.write("\n" + str(floor) + " floor-------------------------------\n\n")
+                file.write(self.tool.replace(item).encode('utf-8'))
+                floor += 1
+        except:
+            print "Error:" + e.reason
+        finally:
+            print "Write Completed"
 
     def start(self):
         Page = self.getPage()
